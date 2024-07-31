@@ -1,0 +1,29 @@
+<header>
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <%= link_to "Wikinimous", articles_path, class: "logo" %>
+        <%= link_to "New Article", new_article_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1 class="mb-4 mt-4 text-center" style="font-size: 2.5rem;">New Article</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <%= form_with model: @article, class: 'form-horizontal' do |f| %>
+          <div class="form-group">
+            <%= f.label :title, class: 'form-label' %>
+            <%= f.text_field :title, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :content, class: 'form-label' %>
+            <%= f.text_area :content, rows: 10, class: 'form-control' %>
+          </div>
+          <%= f.submit class: 'btn btn-primary btn-lg' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>

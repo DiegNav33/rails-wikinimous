@@ -13,3 +13,52 @@
  *= require_tree .
  *= require_self
  */
+
+ header {
+  padding: .5rem 0;
+  border-bottom: .5px solid gray;
+  background-color: #ede1e1;
+
+  .logo {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: .5s;
+  }
+ }
+
+
+.article-item a {
+color: inherit; /* Hérite la couleur du texte du parent */
+text-decoration: none; /* Supprime le soulignement du lien */
+transition: .5s;
+}
+
+/* .article-item a:hover {
+  color: red
+} */
+
+.article-item {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.article-item:hover {
+  background-color: #f8f9fa; /* Couleur de fond lors du survol */
+  cursor: pointer; /* Changement du curseur en pointeur */
+}
+
+
+.form-horizontal .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.25rem;
+  font-size: 1.25rem;
+}
