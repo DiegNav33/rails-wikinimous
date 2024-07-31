@@ -1,15 +1,8 @@
-<header>
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center">
-        <%= link_to "Wikinimous", articles_path, class: "logo" %>
-        <%= link_to "New Article", new_article_path, class: "btn btn-primary" %>
-      </div>
-    </div>
-</header>
+<%= render 'shared/header' %>
 <main>
   <div class="container">
-    <h1 class="text-center mb-4 mt-4" style="font-size: 2.5rem;">All Articles</h1>
-    <ul class="list-group">
+    <h1 class="text-center mb-4 mt-4" style="font-size: 2.5rem;">Discover all the articles</h1>
+    <ul class="list-group mx-auto mb-5" style="max-width: 800px;">
       <%@articles.each do |article| %>
         <li class="list-group-item article-item">
           <%= link_to article_path(article), class: 'text-decoration-none' do %>
